@@ -9,8 +9,8 @@ public:
 
 	Vector operator+(const Vector&);
 	Vector operator-(const Vector&);
-	double operator*(const Vector&);
-	double operator^(const Vector&);
+	double operator*(const Vector&); // DOT PRODUCT
+	double operator^(const Vector&); // CROSS PRODUCT
 	double abs();
 
 	double GetDx();

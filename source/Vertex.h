@@ -6,11 +6,9 @@ class Vertex
 private:
 	static size_t count;
 	size_t id;
-	// data member
 	double xCoord, yCoord;
 	double angle;
 public:
-	// procedures 
 	Vertex(double = 0.0, double = 0.0);
 	virtual ~Vertex();
 	void Reassign(double = 0.0, double = 0.0);

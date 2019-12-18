@@ -1,10 +1,10 @@
 #include "convexHull.h"
 #include <time.h>
+
 #define N 100
-#define XMAX 1.0
-#define YMAX 1.0
 #define RMAX 1.0
 #define M_PI 3.14159265358979323846  /* pi */
+
 int main()
 {
 	//CREATING VERTICES AND ASSIGNING RANDOM VALUE
@@ -19,7 +19,10 @@ int main()
 	}
 
 	vector<Vertex*> list;
+	//CALLING THE CONVEX HULL FUNCTION
 	convexHull(V, list);
+
+	//PRINTING THE CONVEXHULL VERTICES
 	for (auto it = list.begin(); it != list.end(); ++it)
 	{
 		cout << (*it)->GetXCoord() << " " << (*it)->GetYCoord() << endl;
