@@ -5,7 +5,7 @@
 #define XMAX 1.0
 #define YMAX 1.0
 #define RMAX 1.0
-# define M_PI 3.14159265358979323846  /* pi */
+#define M_PI 3.14159265358979323846  /* pi */
 int main()
 {
 	//CREATING VERTICES AND ASSIGNING RANDOM VALUE
