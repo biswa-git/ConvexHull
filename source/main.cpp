@@ -1,7 +1,7 @@
 #include "convexHull.h"
 #include <iostream>
 #include <time.h>
-#define N 100000
+#define N 100
 #define XMAX 1.0
 #define YMAX 1.0
 #define RMAX 1.0

@@ -35,7 +35,7 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 	convexHullVertexList.push_back(&V[0]);
 	convexHullVertexList.push_back(&V[1]);
 
-	for (auto it = 2; it < V.size(); ++it)
+	for (auto it = V.begin()+2; it != V.end(); ++it)
 	{
 		bool contd{ true };
 		while(contd)
@@ -45,7 +45,7 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 			convexHullVertexList.pop_back();
 			Vertex* prev = convexHullVertexList.back();
 			convexHullVertexList.pop_back();
-			Vertex* next = &V[it];
+			Vertex* next = it._Ptr;
 
 			//FORMING EDGE IN THE FORM OF VECTOR
 			Vector firstEdge(*prev, *present);
@@ -58,7 +58,7 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 				contd = false;
 			}
 		}
-		convexHullVertexList.push_back(&V[it]);
+		convexHullVertexList.push_back(it._Ptr);
 	}
 }
 
