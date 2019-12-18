@@ -2,7 +2,7 @@
 
 #include "convexHull.h"
 
-void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
+void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 {
 	size_t firstVertexId = 0;
 	{

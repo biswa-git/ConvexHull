@@ -1,7 +1,7 @@
 #include "convexHull.h"
 #include <time.h>
 
-#define N 1000
+#define N 10000
 #define RMAX 1.0
 #define M_PI 3.14159265358979323846  /* pi */
 
@@ -9,7 +9,6 @@ int main()
 {
 	//CREATING VERTICES AND ASSIGNING RANDOM VALUE
 	vector<Vertex>V;
-	list<Vertex*> convexHullVertexList;
 	srand(time(static_cast<time_t>(0)));
 	for (auto it = 0; it < N; ++it)
 	{
@@ -18,16 +17,15 @@ int main()
 		V.emplace_back(radius * cos(angle), radius * sin(angle));
 	}
 
-	vector<Vertex*> list; // LIST TO STORE POINTER TO CONVEX HULL VERTEX
-
+	list<Vertex*> convexHullVertexList; // LIST TO STORE POINTER TO CONVEX HULL VERTEX
 	//CALLING THE CONVEX HULL FUNCTION
-	convexHull(V, list);
+	convexHull(V, convexHullVertexList);
 
 	//PRINTING THE CONVEXHULL VERTICES
-	for (auto it = list.begin(); it != list.end(); ++it)
+	for (auto it = convexHullVertexList.begin(); it != convexHullVertexList.end(); ++it)
 	{
 		cout << (*it)->GetXCoord() << " " << (*it)->GetYCoord() << endl;
 	}
-	cout << (*list.begin())->GetXCoord() << " " << (*list.begin())->GetYCoord() << endl;
+	cout << (*convexHullVertexList.begin())->GetXCoord() << " " << (*convexHullVertexList.begin())->GetYCoord() << endl;
 
 }
