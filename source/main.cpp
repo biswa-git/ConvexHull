@@ -1,5 +1,4 @@
 #include "convexHull.h"
-#include <iostream>
 #include <time.h>
 #define N 100
 #define XMAX 1.0
