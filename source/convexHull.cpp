@@ -7,7 +7,7 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 	size_t firstVertexId = 0;
 	{
 		//FINDING THE LEFTMOST POINTS ID  O(n)
-		double leftPos = V[0].GetXCoord();
+		double leftPos = V.begin()._Ptr->GetXCoord();
 		for (auto it = V.begin(); it != V.end(); ++it)
 		{
 			if (it->GetXCoord() < leftPos)
@@ -32,8 +32,8 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 
 	//PUSHING THE VERTEX
 	//vector<Vertex*> convexHullVertexList;
-	convexHullVertexList.push_back(&V[0]);
-	convexHullVertexList.push_back(&V[1]);
+	convexHullVertexList.push_back((V.begin()  )._Ptr);
+	convexHullVertexList.push_back((V.begin()+1)._Ptr);
 
 	for (auto it = V.begin()+2; it != V.end(); ++it)
 	{
