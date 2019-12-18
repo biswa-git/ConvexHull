@@ -52,7 +52,7 @@ void convexHull(vector<Vertex>& V, vector<Vertex*>& convexHullVertexList)
 			Vector secondEdge(*present, *next);
 			
 			convexHullVertexList.push_back(prev);
-			if ((firstEdge ^ secondEdge) > 0.0)
+			if ((firstEdge ^ secondEdge) > 0.0) // ^ is overloaded to perform cross product
 			{
 				convexHullVertexList.push_back(present);
 				contd = false;
