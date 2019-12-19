@@ -1,5 +1,3 @@
-// convex_hull.cpp : This file contains the 'main' function. Program execution begins and ends there.
-
 #include "convexHull.h"
 
 void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
