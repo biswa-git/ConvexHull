@@ -2,7 +2,7 @@
 
 void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 {
-	size_t firstVertexId = 0;
+	Vertex* firstVertex = nullptr;
 	{
 		//FINDING THE LEFTMOST POINTS ID  O(n)
 		double leftPos = V.begin()._Ptr->GetXCoord();
@@ -11,7 +11,7 @@ void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 			if (it->GetXCoord() < leftPos)
 			{
 				leftPos = it->GetXCoord();
-				firstVertexId = it->GetId();
+				firstVertex = it._Ptr;
 			}
 		}
 	}
@@ -20,10 +20,10 @@ void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 
 	for (auto it = V.begin(); it != V.end(); ++it)
 	{
-			Vector vec1(V[firstVertexId], *it);
+			Vector vec1(*firstVertex, *(it._Ptr));
 			it->SetAngle(asin((vec1.GetDy()) / vec1.abs()));
 	}
-	V[firstVertexId].SetAngle(-2.0);
+	firstVertex->SetAngle(-2.0);
 
 	// SORTING THE ANGLE
 	sort(V.begin(), V.end(), compareAngle);
