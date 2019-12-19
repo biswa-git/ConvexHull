@@ -13,8 +13,8 @@ int main()
 	for (auto it = 0; it < N; ++it)
 	{
 		double radius = RMAX * static_cast<double> (rand()) / static_cast<double>(RAND_MAX);
-		double angle = 2.0 * M_PI * static_cast<double> (rand()) / static_cast<double>(RAND_MAX);
-		V.emplace_back(radius * cos(angle), radius * sin(angle));
+		double theta = 2.0 * M_PI * static_cast<double> (rand()) / static_cast<double>(RAND_MAX);
+		V.emplace_back(radius * cos(theta), radius * sin(theta));
 	}
 
 	list<Vertex*> convexHullVertexList; // LIST TO STORE POINTER TO CONVEX HULL VERTEX
