@@ -33,7 +33,6 @@ void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 		CASES. WHICH I WILL ADD SUBSEQUENTLY :)
 	-----------------------------------------------------*/
 
-
 	//PUSHING THE VERTEX
 	//vector<Vertex*> convexHullVertexList;
 	convexHullVertexList.push_back((V.begin()  )._Ptr);
