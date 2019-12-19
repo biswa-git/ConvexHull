@@ -28,6 +28,13 @@ void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 	// SORTING THE ANGLE
 	sort(V.begin(), V.end(), compareAngle);
 
+
+	/*-----------------------------------------------------
+		WE NEED TO ADD FEW ADDITIONAL CHECKS FOR CORNER 
+		CASES. WHICH I WILL ADD SUBSEQUENTLY :)
+	-----------------------------------------------------*/
+
+
 	//PUSHING THE VERTEX
 	//vector<Vertex*> convexHullVertexList;
 	convexHullVertexList.push_back((V.begin()  )._Ptr);
