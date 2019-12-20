@@ -30,7 +30,7 @@ void convexHull(vector<Vertex>& V, list<Vertex*>& convexHullVertexList)
 
 	/*-----------------------------------------------------
 		WE NEED TO ADD FEW ADDITIONAL CHECKS FOR CORNER 
-		CASES. WHICH I WILL ADD SUBSEQUENTLY :)
+		CASES. WHICH I WILL ADD LATER :)
 	-----------------------------------------------------*/
 
 	//PUSHING THE VERTEX
