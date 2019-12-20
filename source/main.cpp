@@ -19,13 +19,13 @@ int main()
 
 	list<Vertex*> convexHullVertexList; // LIST TO STORE POINTER TO CONVEX HULL VERTEX
 	//CALLING THE CONVEX HULL FUNCTION
+	//------------------------------------------
 	convexHull(V, convexHullVertexList);
-
+	//------------------------------------------
 	//PRINTING THE CONVEXHULL VERTICES
 	for (auto it = convexHullVertexList.begin(); it != convexHullVertexList.end(); ++it)
 	{
 		cout << (*it)->GetXCoord() << " " << (*it)->GetYCoord() << endl;
 	}
 	cout << (*convexHullVertexList.begin())->GetXCoord() << " " << (*convexHullVertexList.begin())->GetYCoord() << endl;
-
 }
